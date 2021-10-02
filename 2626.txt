@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>工具介紹</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul data-role="listview" data-theme="g">
+			  <li><a href="#page2" data-rel="dialog">
+			  <img src="assets/album-bb.jpg" />
+			  <h3>對話框工具</h3>
+			  <p>Dialog tool</p>
+		      </a></li>
+	          	<li><a href="index.html">
+				<img src="assets/album-hc.jpg" />
+				<h3>體重計算工具</h3>
+				<p>Weight counting tool</p>
+			    </a></li>
+	          	<li><a href="index.html">
+				<img src="assets/album-p.jpg" />
+				<h3>樂透選號工具</h3>
+				<p>Lottery tool</p>
+			</a></li>
+        </ul>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Copyright @2021.</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="page2">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>
+		<a href="#home" data-role="button" data-icon="home">返回</a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Copyright @2021.</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="page3">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Copyright @2021.</h4>
+	</div><!-- /footer -->
+
+	
+	
+	
+</div><!-- /page -->
+</body>
+</html>

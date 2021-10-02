@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>工具介紹</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script>
+	           function bmi(){
+	           $h = $ ("#height").val();
+			   $w = $ ("#weight").val();
+			   $h = $h / 100;
+			   $bmi = $w / ($h * $h);
+	           alert("BMI值為:" + $bmi);
+			   if($bmi > 24){
+			        alert("過重");
+	           }else if($bmi < 18.5){
+			        alert("過輕");
+			   }else{
+			        alert("適中");
+			   }		   
+
+               }
+			function lottery(){
+	           $max = $ ("#input1").val();
+			   $num = $ ("#input2").val();
+               $output= "";
+			   for ($i=1; $i <= $num; $i++){
+			         $ran = Math.random();
+			         $ran = Math.ceil($ran * $max);
+                     $output =$output + $ran + " ";
+	                 
+				}
+				alert($output);
+				
+               }
+			   function bmi1(){
+	           $h1 = $ ("#height").val();
+			   $w1 = $ ("#weight").val();
+
+			   $bmi1 = ($h1 - 80) * 0.7;
+	           alert($bmi1);
+              }
+	
+	        
+	</script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul data-role="listview" data-theme="g">
+			  <li><a href="#page2" >
+			  <img src="assets/album-bb.jpg" />
+			  <h3>對話框工具</h3>
+			  <p>Dialog tool</p>
+		      </a></li>
+	          	<li><a href="#page3">
+				<img src="assets/album-hc.jpg" />
+				<h3>體重計算工具</h3>
+				<p>Weight counting tool</p>
+			    </a></li>
+	          	<li><a href="#page4">
+				<img src="assets/album-p.jpg" />
+				<h3>樂透選號工具</h3>
+				<p>Lottery tool</p>
+			</a></li>
+        </ul>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Copyright @2021.</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="page2">
+
+	<div data-role="header">
+		<h1>工具介紹</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>
+		<a href="#home" data-role="button" data-icon="home">返回</a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Copyright @2021.</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="page3">
+
+	<div data-role="header">
+		<h1>工具介紹</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	
+		 <label for="height">身高 : </label>
+         <input type="range" name="height" id="height" value="160" min="100" max="200" step="1" />	
+		 <label for="weight">體重 : </label>
+         <input type="range" name="weight" id="weight" value="50" min="40" max="120" step="1" />	
+		 <a href="#" data-role="button" data-icon="gear"  onclick="bmi();">計算</a>
+		 <a href="#" data-role="button" data-icon="gear"  onclick="bmi1();">標準體重計算</a>
+		 <a href="#home" data-role="button" data-icon="home">返回</a>
+	</div><!-- /content -->
+               
+	<div data-role="footer">
+		<h4>Copyright @2021.</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="page4">
+
+	<div data-role="header">
+		<h1>工具介紹</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	
+		<label for="input1">最大值:</label>
+        <input type="text" name="input1" id="input1" value=""  />
+		
+		<label for="input2">選取個數:</label>
+		<input type="text" name="input2" id="input2" value=""  />
+		<a href="#" data-role="button" data-icon="gear"  onclick="lottery();">選號</a>
+		<a href="#home" data-role="button" data-icon="home">返回</a>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Copyright @2021.</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+	
+	
+</div><!-- /page -->
+</body>
+</html>
